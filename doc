@@ -1,0 +1,39 @@
+python -m django --version
+
+django-admin startproject mysite
+python manage.py runserver
+python manage.py runserver 0:8000
+
+python manage.py startapp polls
+python manage.py makemigrations polls
+python manage.py sqlmigrate polls 0001
+ipython manage.py migrate
+
+# 修改模型时的操作分三步：
+# 在models.py中修改模型；
+# 运行python manage.py makemigrations为改动创建迁移记录文件；
+# 运行python manage.py migrate，将操作同步到数据库。
+
+python manage.py shell
+# 相当于：
+python
+import django
+django.setup()
+
+# django 模板语言
+# 删除模板中硬编码的URLs，urls定义name别名
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
